@@ -106,7 +106,8 @@ func vhdUploadCmdHandler() cli.Command {
 			}
 			defer diskStream.Close()
 
-			storageClient, err := storage.NewBasicClient(stgAccountName, stgAccountKey)
+			//storageClient, err := storage.NewBasicClient(stgAccountName, stgAccountKey)
+			storageClient, err := storage.NewClient(stgAccountName, stgAccountKey, "ppe3.stackpoc.com", "2019-07-07", true)
 			if err != nil {
 				return err
 			}
