@@ -78,10 +78,10 @@ func NewMetaDataFromLocalVHD(vhdPath string) (*MetaData, error) {
 	}
 	defer diskStream.Close()
 	fileMetaData.VHDSize = diskStream.GetSize()
-	fileMetaData.MD5Hash, err = calculateMD5Hash(diskStream)
-	if err != nil {
-		return nil, err
-	}
+	// fileMetaData.MD5Hash, err = calculateMD5Hash(diskStream)
+	// if err != nil {
+	// 	return nil, err
+	// }
 
 	return &MetaData{
 		FileMetaData: fileMetaData,

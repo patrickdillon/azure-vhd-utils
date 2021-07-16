@@ -161,7 +161,7 @@ func vhdUploadCmdHandler() cli.Command {
 				BlobName:              blobName,
 				Parallelism:           parallelism,
 				Resume:                resume,
-				MD5Hash:               localMetaData.FileMetaData.MD5Hash,
+				//MD5Hash:               localMetaData.FileMetaData.MD5Hash,
 			}
 
 			err = upload.Upload(cxt)
